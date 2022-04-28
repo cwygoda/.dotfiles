@@ -15,3 +15,10 @@ Reload ZSH to set up `dotfiles` command alias.
 dotfiles add .config/fancy-config-file
 dotfiles commit -m "Add fancy config file"
 ```
+
+## Local config files
+
+The following files should be set up without being committed:
+
+- `.secrets`: secret env vars like API tokens
+- `.config/git/config.local`: Device specific git config, i.e. user settings
