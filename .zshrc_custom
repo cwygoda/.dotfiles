@@ -1,0 +1,16 @@
+export PATH=${HOME}/.pyenv/bin:${PATH}
+
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
+
+eval "$(direnv hook zsh)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+alias vim=nvim
+export EDITOR=nvim
+
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+source ~/.secrets
